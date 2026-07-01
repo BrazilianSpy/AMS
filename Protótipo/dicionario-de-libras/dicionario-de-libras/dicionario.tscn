@@ -1,0 +1,396 @@
+[gd_scene format=3 uid="uid://3ad4il0n8i26"]
+
+[ext_resource type="Script" uid="uid://bcs3fdvw00uvp" path="res://dicionario.gd" id="1_ip2ob"]
+[ext_resource type="Script" uid="uid://c2gggjf5c3j3s" path="res://novo_sinal.gd" id="2_ejwbt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ip2ob"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejwbt"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_dbh5u"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_ip2ob")
+Label/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/styles/normal = SubResource("StyleBoxFlat_ejwbt")
+
+[sub_resource type="Gradient" id="Gradient_ip2ob"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.74, 0.74, 0.74, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ejwbt"]
+gradient = SubResource("Gradient_ip2ob")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dbh5u"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myc1b"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmlr0"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Gradient" id="Gradient_dbh5u"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_myc1b"]
+gradient = SubResource("Gradient_dbh5u")
+
+[node name="Dicionario" type="Control" unique_id=1414200691]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_dbh5u")
+script = ExtResource("1_ip2ob")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1779548154]
+position = Vector2(575.99994, 324.00003)
+scale = Vector2(4.499999, 648)
+texture = SubResource("GradientTexture1D_ejwbt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1556996699]
+layout_mode = 0
+offset_right = 377.0
+offset_bottom = 93.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=411788374]
+layout_mode = 2
+text = "Busca"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1533114060]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=298806518]
+layout_mode = 2
+text = "Palavra:"
+
+[node name="Palavra" type="LineEdit" parent="VBoxContainer/HBoxContainer2" unique_id=301593298]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=1537922547]
+layout_mode = 2
+text = "N*:"
+
+[node name="Numero" type="LineEdit" parent="VBoxContainer/HBoxContainer2" unique_id=335369003]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Buscar" type="Button" parent="VBoxContainer" unique_id=700947642]
+layout_mode = 2
+text = "Buscar"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1901557134]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -412.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2" unique_id=924554137]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer" unique_id=293657582]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Assuntos" type="Label" parent="VBoxContainer2/HBoxContainer/VBoxContainer2" unique_id=1147626583]
+layout_mode = 2
+text = "Assuntos"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/VBoxContainer2" unique_id=1649837306]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_dbh5u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer" unique_id=1714022977]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer/VBoxContainer" unique_id=863737312]
+layout_mode = 2
+text = "Palavras"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer2/HBoxContainer/VBoxContainer" unique_id=19535717]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_myc1b")
+
+[node name="Palavras" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer/VBoxContainer/ScrollContainer" unique_id=1768868970]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer" unique_id=1042577298]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Mão" type="Label" parent="VBoxContainer2/HBoxContainer/VBoxContainer3" unique_id=1483832276]
+layout_mode = 2
+text = "Mão"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/VBoxContainer3" unique_id=1818135813]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_dbh5u")
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer" unique_id=175958451]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Video" type="Label" parent="VBoxContainer2/HBoxContainer/VBoxContainer4" unique_id=1598599442]
+layout_mode = 2
+text = "Video"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer/VBoxContainer4" unique_id=376773048]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_dbh5u")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2" unique_id=1404297988]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer2" unique_id=1095671671]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Assuntos" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer2" unique_id=1278200974]
+layout_mode = 2
+text = "Acepção"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer2" unique_id=1195157946]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_pmlr0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer2" unique_id=620903449]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer" unique_id=416231262]
+layout_mode = 2
+text = "Exemplo"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer" unique_id=427782104]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_dbh5u")
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer2/VBoxContainer" unique_id=1412006131]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer/VBoxContainer5" unique_id=1939107580]
+layout_mode = 2
+text = "Classe Gramatical"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer/VBoxContainer5" unique_id=1515999141]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_dbh5u")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer2" unique_id=23433278]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Mão" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer3" unique_id=1597904600]
+layout_mode = 2
+text = "Exemplo Libras"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer3" unique_id=477260033]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_dbh5u")
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer2/VBoxContainer3" unique_id=1784236674]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer3/VBoxContainer5" unique_id=2069118628]
+layout_mode = 2
+text = "Origem"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer3/VBoxContainer5" unique_id=2898294]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_dbh5u")
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer2/HBoxContainer2" unique_id=1944583806]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Video" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer4" unique_id=489808505]
+layout_mode = 2
+text = "Imagem"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer2/VBoxContainer4" unique_id=1407379130]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_dbh5u")
+
+[node name="Control" type="Control" parent="." unique_id=1095043284]
+anchors_preset = 0
+offset_left = 362.0
+offset_top = 34.0
+offset_right = 402.0
+offset_bottom = 74.0
+script = ExtResource("2_ejwbt")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Control" unique_id=1928263063]
+position = Vector2(201, 238.5)
+scale = Vector2(1.692, 524.237)
+texture = SubResource("GradientTexture1D_myc1b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=528322088]
+position = Vector2(200.99998, 238.49998)
+scale = Vector2(1.6171877, 500.99997)
+texture = SubResource("GradientTexture1D_ejwbt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1241814928]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 311.0
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="Control/VBoxContainer" unique_id=1404525314]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Adicionar novo sinal"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=1333412690]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer" unique_id=1596341255]
+layout_mode = 2
+text = "Palavra"
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer/HBoxContainer" unique_id=1475070577]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=1583107019]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer2" unique_id=1308169001]
+layout_mode = 2
+text = "origem"
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer/HBoxContainer2" unique_id=577264197]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=1884746680]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer3" unique_id=1499907890]
+layout_mode = 2
+text = "classe"
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer/HBoxContainer3" unique_id=345500693]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=551865409]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer4" unique_id=97930818]
+layout_mode = 2
+text = "exemplo"
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer/HBoxContainer4" unique_id=596566126]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=1042546870]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer5" unique_id=204584726]
+layout_mode = 2
+text = "exemplo libras"
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer/HBoxContainer5" unique_id=1252271536]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=82192939]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer6" unique_id=2073391249]
+layout_mode = 2
+text = "acepção"
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer/HBoxContainer6" unique_id=543195698]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=723350331]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer7" unique_id=22281096]
+layout_mode = 2
+text = "imagem"
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer/HBoxContainer7" unique_id=244408122]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=1406630212]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer8" unique_id=114198408]
+layout_mode = 2
+text = "mão"
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer/HBoxContainer8" unique_id=665986066]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=45528746]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer9" unique_id=80944701]
+layout_mode = 2
+text = "video"
+
+[node name="LineEdit" type="LineEdit" parent="Control/VBoxContainer/HBoxContainer9" unique_id=771799336]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="Control/VBoxContainer" unique_id=1427931025]
+layout_mode = 2
+text = "ADICIONAR"
+
+[node name="Button2" type="Button" parent="Control/VBoxContainer" unique_id=2109447081]
+layout_mode = 2
+text = "CANCELAR"
+
+[connection signal="pressed" from="VBoxContainer/Buscar" to="." method="_on_buscar_pressed"]
