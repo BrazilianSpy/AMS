@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://w7owbnj1egdn"]
+
+[ext_resource type="Script" uid="uid://cogbyas75gjjx" path="res://escolher.gd" id="1_icc0o"]
+
+[sub_resource type="Gradient" id="Gradient_ip2ob"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.74, 0.74, 0.74, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_k6v2i"]
+gradient = SubResource("Gradient_ip2ob")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myc1b"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Escolher" type="Window" unique_id=245785398]
+oversampling_override = 1.0
+position = Vector2i(100, 36)
+size = Vector2i(200, 400)
+script = ExtResource("1_icc0o")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1316981381]
+position = Vector2(99.50001, 198)
+scale = Vector2(0.83203125, 411.99994)
+texture = SubResource("GradientTexture1D_k6v2i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1587587256]
+custom_minimum_size = Vector2(200, 0)
+offset_right = 200.0
+offset_bottom = 400.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=923915992]
+layout_mode = 2
+text = "Palavras"
+
+[node name="Palavra_escolha" type="LineEdit" parent="VBoxContainer" unique_id=676410733]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Buscar" type="Button" parent="VBoxContainer" unique_id=729514771]
+layout_mode = 2
+text = "Buscar"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=1303672537]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_myc1b")
+
+[node name="Palavras_escolha" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=1811305095]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="VBoxContainer/Buscar" to="." method="_on_buscar_pressed"]

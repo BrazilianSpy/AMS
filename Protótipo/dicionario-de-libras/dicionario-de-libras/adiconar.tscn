@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://b0weh0p7vbkxt"]
+
+[ext_resource type="Script" uid="uid://c2gggjf5c3j3s" path="res://novo_sinal.gd" id="1_qbnot"]
+
+[sub_resource type="Gradient" id="Gradient_dbh5u"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_myc1b"]
+gradient = SubResource("Gradient_dbh5u")
+
+[sub_resource type="Gradient" id="Gradient_ip2ob"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.74, 0.74, 0.74, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ejwbt"]
+gradient = SubResource("Gradient_ip2ob")
+
+[node name="Adicionar" type="Window" unique_id=47466829]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(433, 524)
+script = ExtResource("1_qbnot")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=584197366]
+position = Vector2(216.576, 262.1185)
+scale = Vector2(1.692, 524.237)
+texture = SubResource("GradientTexture1D_myc1b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=591454541]
+position = Vector2(216.57599, 262.11847)
+scale = Vector2(1.6171877, 500.99997)
+texture = SubResource("GradientTexture1D_ejwbt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=564939983]
+custom_minimum_size = Vector2(400, 0)
+offset_left = 15.576004
+offset_top = 23.6185
+offset_right = 415.576
+offset_bottom = 519.6185
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1460324811]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Adicionar novo sinal"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=605474778]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=2045002442]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Palavra"
+
+[node name="palavra" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=1219031563]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=620133806]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=1786779101]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Origem"
+
+[node name="origem" type="LineEdit" parent="VBoxContainer/HBoxContainer2" unique_id=1750580827]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=1648112662]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=1228910469]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Classe"
+
+[node name="classe" type="LineEdit" parent="VBoxContainer/HBoxContainer3" unique_id=464297948]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=963363873]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=1038943111]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Exemplo"
+
+[node name="exemplo" type="LineEdit" parent="VBoxContainer/HBoxContainer4" unique_id=1263756827]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer" unique_id=1821599700]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer5" unique_id=266246370]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Exemplo libras"
+
+[node name="exemplo_libras" type="LineEdit" parent="VBoxContainer/HBoxContainer5" unique_id=258024786]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer" unique_id=625376202]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer6" unique_id=521764888]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Acepção"
+
+[node name="acepcao" type="LineEdit" parent="VBoxContainer/HBoxContainer6" unique_id=1697618342]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer" unique_id=1040539579]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer7" unique_id=1805587112]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Imagem"
+
+[node name="imagem" type="LineEdit" parent="VBoxContainer/HBoxContainer7" unique_id=1586993743]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer" unique_id=382827184]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer8" unique_id=1235705685]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Mão"
+
+[node name="mao" type="LineEdit" parent="VBoxContainer/HBoxContainer8" unique_id=1633440553]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="VBoxContainer" unique_id=1682407086]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer9" unique_id=94965881]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Video"
+
+[node name="video" type="LineEdit" parent="VBoxContainer/HBoxContainer9" unique_id=1946508495]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="VBoxContainer" unique_id=304634632]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer10" unique_id=1240579019]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Assunto"
+
+[node name="assunto" type="LineEdit" parent="VBoxContainer/HBoxContainer10" unique_id=177708186]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Adicionar" type="Button" parent="VBoxContainer" unique_id=159476453]
+layout_mode = 2
+text = "ADICIONAR"
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="VBoxContainer/Adicionar" to="." method="_on_adicionar_pressed"]
